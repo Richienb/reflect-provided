@@ -1,14 +1,17 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Reflect the provided arguments.
+ * @param args The arguments to reflect.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const reflectProvided = require("reflect-provided");
+ * reflectProvided("Hello World!")
+ * //=> "Hello World!"
+ *
+ * reflectProvided("Hello World!", "A second argument")
+ * //=> ["Hello World!", "A second argument"]
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function reflectProvided<T>(args: T): T;
+declare function reflectProvided<T>(...args: T): T;
 
-export = theModule;
+export = reflectProvided;

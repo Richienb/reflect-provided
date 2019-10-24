@@ -1,41 +1,33 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Reflect provided [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/reflect-provided/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/reflect-provided)
 
-My awesome module.
+Reflect the provided arguments.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/reflect-provided.png)](https://npmjs.com/package/reflect-provided)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install reflect-provided
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const reflectProvided = require("reflect-provided");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+reflectProvided("Hello World!");
+//=> "Hello World!"
+
+reflectProvided("Hello World!", "A second argument");
+//=> ["Hello World!", "A second argument"]
 ```
 
 ## API
 
-### theModule(input, options?)
+### reflectProvided(...args)
 
-#### input
+#### `spread` args
 
-Type: `string`
+Type: `any`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The arguments to reflect.

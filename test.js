@@ -1,13 +1,8 @@
 import test from "ava"
-import theModule from "."
+import reflectProvided from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    t.is(reflectProvided(), undefined)
+    t.is(reflectProvided("Hello World!"), "Hello World!")
+    t.deepEqual(reflectProvided("Hello World!", "A second argument"), ["Hello World!", "A second argument"])
 })
