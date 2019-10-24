@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
-    "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "name": "reflect-provided",
+    "version": "1.0.0",
+    "description": "Reflect the provided arguments.",
+    "repository": "https://github.com/Richienb/reflect-provided.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,13 +11,17 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
+    "keywords": [
+        "reflect",
+        "mirror",
+        "identity"
+    ],
     "dependencies": {},
     "devDependencies": {
         "ava": "^2.1.0",
